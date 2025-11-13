@@ -1,4 +1,4 @@
-
+/* Import romantic fonts */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400&display=swap');
 
 /* CSS Variables for romantic color scheme */
@@ -148,6 +148,221 @@ body {
     color: var(--rose-gold);
     font-style: italic;
     margin-top: 10px;
+}
+
+/* ESTILOS PARA LA SECCIÓN DE CARTA - EDITA AQUÍ LOS COLORES Y TAMAÑOS */
+.letter-section {
+    position: relative;
+    z-index: 2;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.letter-button-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.letter-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px 50px;
+    background: linear-gradient(135deg, var(--primary-pink), var(--soft-pink));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: all 0.4s ease;
+    border: 3px solid var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.letter-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.letter-button:hover::before {
+    left: 100%;
+}
+
+.letter-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 107, 157, 0.4);
+}
+
+.letter-icon {
+    font-size: 2rem;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+.letter-text {
+    font-size: 1.5rem;
+}
+
+.letter-hint {
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--rose-gold);
+    font-style: italic;
+}
+
+/* ESTILOS PARA LA PÁGINA DE LA CARTA - EDITA AQUÍ EL DISEÑO DE LA CARTA */
+.letter-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.letter-paper {
+    max-width: 800px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 20px 60px var(--shadow);
+    border: 5px solid var(--soft-pink);
+    position: relative;
+}
+
+.letter-paper::before {
+    content: '💕';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    opacity: 0.1;
+}
+
+.letter-paper::after {
+    content: '💖';
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 4rem;
+    opacity: 0.1;
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 3px dashed var(--soft-pink);
+}
+
+.letter-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-pink);
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px var(--shadow);
+}
+
+.letter-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--rose-gold);
+    font-style: italic;
+}
+
+.letter-content {
+    line-height: 2;
+    color: var(--text-dark);
+}
+
+.letter-greeting {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--primary-pink);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.letter-paragraph {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    text-align: justify;
+    text-indent: 40px;
+}
+
+.letter-closing {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: var(--rose-gold);
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.letter-signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--primary-pink);
+    margin-bottom: 30px;
+}
+
+.letter-ps {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: var(--rose-gold);
+    font-style: italic;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed var(--light-pink);
+}
+
+.letter-back-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, var(--rose-gold), var(--primary-pink));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 8px 20px var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 107, 157, 0.4);
 }
 
 /* Container */
@@ -384,6 +599,28 @@ body {
         font-size: 1rem;
     }
     
+    .letter-button {
+        padding: 20px 35px;
+        font-size: 1.2rem;
+    }
+    
+    .letter-text {
+        font-size: 1.2rem;
+    }
+    
+    .letter-paper {
+        padding: 40px 30px;
+    }
+    
+    .letter-title {
+        font-size: 2.5rem;
+    }
+    
+    .letter-paragraph {
+        font-size: 1rem;
+        text-indent: 20px;
+    }
+    
     .date-header h2 {
         font-size: 1.8rem;
     }
@@ -409,6 +646,33 @@ body {
     
     .rose {
         font-size: 1.5rem;
+    }
+    
+    .letter-button {
+        padding: 15px 25px;
+        font-size: 1rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .letter-text {
+        font-size: 1rem;
+    }
+    
+    .letter-icon {
+        font-size: 1.5rem;
+    }
+    
+    .letter-paper {
+        padding: 30px 20px;
+    }
+    
+    .letter-title {
+        font-size: 2rem;
+    }
+    
+    .letter-signature {
+        font-size: 2rem;
     }
     
     .date-header h2 {
