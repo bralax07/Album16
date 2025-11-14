@@ -135,7 +135,7 @@ body {
 }
 
 .romantic-header h1 {
-    font-family: 'Great Vibes', cursive;
+    font-family:'Great Vibes';
     font-size: 4rem;
     color: var(--primary-pink);
     text-shadow: 2px 2px 4px var(--shadow);
@@ -150,7 +150,7 @@ body {
     margin-top: 10px;
 }
 
-/* ESTILOS PARA LA SECCIÓN DE CARTA - EDITA AQUÍ LOS COLORES Y TAMAÑOS */
+/* ESTILOS PARA LA SECCIÓN DE CARTA*/
 .letter-section {
     position: relative;
     z-index: 2;
@@ -232,7 +232,7 @@ body {
     font-style: italic;
 }
 
-/* ESTILOS PARA LA PÁGINA DE LA CARTA - EDITA AQUÍ EL DISEÑO DE LA CARTA */
+/* ESTILOS PARA LA PÁGINA DE LA CARTA*/
 .letter-container {
     min-height: 100vh;
     display: flex;
@@ -307,21 +307,16 @@ body {
     font-weight: 600;
 }
 
+.Audio_16-11-2025 {
+    float: right;
+}
+
 .letter-paragraph {
     font-family: 'Lato', sans-serif;
     font-size: 1.15rem;
     margin-bottom: 25px;
     text-align: justify;
     text-indent: 40px;
-}
-
-.letter-closing {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    color: var(--rose-gold);
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-style: italic;
 }
 
 .letter-signature {
